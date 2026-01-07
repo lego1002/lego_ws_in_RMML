@@ -34,16 +34,15 @@
 * **固定端**：將驅動器 **XH0+ (Pin 17)** 與 **XH1+ (Pin 21)** 接至 **Arduino 5V** (利用驅動器內部 5V 邏輯電阻)。
 * **控制端**：將驅動器 **XH0- (Pin 19)** 與 **XH1- (Pin 23)** 接至 **Arduino I/O (D5, D6)**。
 
-* **接線圖:**
-![alt text](image-1.png)
-![alt text](image-2.png)
-
 
 #### 4. 程式邏輯反轉 (韌體層面)
 
 * 因改用 Sinking 接法，控制邏輯變更為 **低電位觸發 (Low Active)**：
 * **方向**：`LOW` = 導通 (Action A), `HIGH` = 不導通 (Action B)。
 * **速度**：PWM `255` = 停止 (0%), PWM `0` = 全速 (100%)。
+* **接線圖:**
+![alt text](image-1.png)
+![alt text](image-2.png)
 
 
 * **測試結果**：成功實現平滑加減速 (Ramping) 與正反轉切換。
